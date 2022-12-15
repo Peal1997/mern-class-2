@@ -1,0 +1,48 @@
+.search {
+    width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+.search input {
+    border: none;
+    outline: none;
+}
+.search i {
+    position: absolute;
+    font-size:20px;
+    top: 13px;
+    right: 15px;
+    color: red;
+    display: none;
+    
+}
+
+.toltip {
+    background-color: red;
+    width:150px;
+    padding: 7px;
+    position: absolute;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.toltip i {
+    display: block;
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    top: -16px;
+   
+
+}
+
+.toltip-wraper {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    display: none;
+}
+
+
