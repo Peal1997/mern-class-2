@@ -1,42 +1,39 @@
-const input = document.querySelector('input')
-const search = document.querySelector('.search')
-const warning = document.querySelector('.warning')
-const tt = document.querySelector('.toltip-wraper')
+const body = document.body
+const buttons = document.querySelectorAll('input[name = "change"]')
+const labels = document.querySelectorAll('label')
 
 
-let count = 0
-input.onblur = () => {
-   if(input.value){
-    search.style.borderColor = 'black'
-    warning.style.display = 'none'
-    
-   }else {
-    search.style.borderColor = 'red'
-    warning.style.display = 'block'
-    
-    
-   }
-  tt.style.display = 'none'
-  count++
-    
-}
-input.onfocus = () => {
-    if(count > 0){
-        tt.style.display = 'block'
+labels.forEach(label => {
+    label.firstElementChild.onchange = () => {
+        if (label.firstElementChild.value == 'dark') {
+            body.style.backgroundColor = '#001920'
+            labels.forEach(item => {
+                item.style.color = 'white'
+            })
+           
+            
+        } else {
+            body.style.backgroundColor = 'white'
+            labels.forEach(tamjid => {
+                tamjid.style.color = 'black'
+            })
+            
+        }
     }
-    search.style.borderColor = 'black'
-    warning.style.display = 'none'
-    
-}
+})
 
-input.onkeyup = () => {
-    if(input.value){
-        tt.style.display = 'none'
-    }else {
-        tt.style.display = 'block'
-    }
-}
-
+// buttons.forEach((item)=> {
+//     item.onchange = () => {
+//         if (item.value == 'dark') {
+//             body.style.backgroundColor = '#001920'
+           
+            
+//         } else {
+//             body.style.backgroundColor = 'white'
+            
+//         }
+//     }
+// })
 
 
 
